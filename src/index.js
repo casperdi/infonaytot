@@ -13,9 +13,11 @@ let time = [];
 
 const title = document.querySelector('#title');
 const date = new Date();
+console.log('hello', date);
 
 let day = date.getDate();
-let month = date.getMonth();
+let month = date.getMonth() + 1;
+console.log('kk',month);
 let year = date.getFullYear();
 
 
