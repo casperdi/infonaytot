@@ -1,88 +1,208 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
 }
 
-#lunch{
-  display: flex;
-  flex-direction: row;
+section {
+  width: 100%;
   height: 100vh;
 }
 
-#foodco{
-  width: 50%;
-  background-image: url('./img/photo-1503919483171-9ffc1debc390.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  padding: 35vh 0;
+/* ---------------------- first view, lunchlist -------------------------- */
+
+#lunch {
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
-#foodcotitle{
+#foodco {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/anna-pelzer-IGfIGP5ONV0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
+#foodcotitle {
   background-color: white;
   padding: 10%;
   width: 50%;
   margin: auto;
-  font-size: 2rem;
-  font-family: 'Londrina Solid', cursive;
+  font-size: 2.5rem;
+  font-family: "Londrina Solid", cursive;
 }
 
 #foodcotitle img {
   width: 100%;
 }
 
-#foodcotitle p{
+#foodcotitle p {
   margin: 30px 0 0 0;
   padding: 0;
 }
 
-#lunchlist{
+#lunchlist {
   width: 50%;
-  padding: 150px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.meal-allergens{
-  color: #FA7D09;
+.meal-allergens {
+  color: #fa7d09;
+}
+.meal-allergens p {
+  margin: 0;
 }
 
-.meal-name{
+.meal-name {
   font-weight: 600;
   margin-right: 10px;
 }
-.meal-container{
+.meal-name p {
+  margin: 0;
+}
+.meal-container {
   display: flex;
 }
 
-#title{
-  color: #FA7D09;
-  font-family: 'Londrina Solid', cursive;
-  font-size: 30px;
+#title {
+  color: #fa7d09;
+  font-family: "Londrina Solid", cursive;
+  font-size: 3rem;
+  align-self: center;
 }
 
-#metropolia_logo{
-  width: 300px;
-  height: 300px;
+.metropolia_logo {
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
-  .lists ul {
-    padding: 0;
-    margin: 0;
-  }
+.lists ul {
+  padding: 0;
+  margin: 0;
+}
 
-  .lists ul li {
-    list-style-type: none;
-    text-align: left;
-    padding-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
+.lists ul li {
+  list-style-type: none;
+  text-align: left;
+  padding-bottom: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#allergens{
+  font-size: 1rem;
+  align-self: center;
+  width: 70%;
+  margin-top: 60px;
+
+}
+
+/* ---------------------------- second view, bustimetable -------------------------------- */
+
+#bustimes {
+  position: relative;
+}
+
+#timetable {
+  width: 60%;
+  background-color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#timetable i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.times {
+  display: flex;
+  justify-content: space-around;
+}
+
+.times ul {
+  padding: 0;
+  margin: 0;
+}
+
+#destination {
+  color: rgb(232, 93, 11);
+}
+
+.times ul li {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#feedback {
+  display: flex;
+  flex-direction: row;
+  background-color: #d985d0;
+  position: relative;
+}
+
+#teksti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 2rem;
+}
+
+#suomi {
+  margin-bottom: 100px;
+}
+
+#suomi h1 {
+  color: white;
+  font-family: "Londrina Solid", cursive;
+}
+
+#suomi p {
+  color: white;
+}
+
+#englanti h1 {
+  color: black;
+  font-family: "Londrina Solid", cursive;
+}
+
+#englanti p {
+  color: black;
+}
+
+#qrcode {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#qrcodeimg {
+  width: 50%;
+}

@@ -3,6 +3,7 @@ import HSLData, { apiUrl } from './modules/hslAPI';
 import { fetchData } from './modules/network';
 import { campus } from './modules/weatherAPI';
 import FazerData from './modules/fazer-data';
+import FazerDatatest from './modules/fazer-data-testi';
 
 
 let location = campus.karamalmi;
@@ -71,6 +72,7 @@ const init = async () => {
   const fazerKaramalmiFi = await FazerData.karamalmiFi;
   const fazerKaramalmiFitest = await FazerData.karamalmiFitest;
   const fazerKaramalmiEn = await FazerData.karamalmiEn;
+  console.log('testii', fazerKaramalmiFitest);
   renderCourseList(fazerKaramalmiFi);
   title.innerHTML = day + "." + month + "." + year;
 

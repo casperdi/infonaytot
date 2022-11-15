@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="PWA- and DS-project done in Metropolia University of Applied Sciences,
+    course: web technology and media platforms"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <!--<link rel="stylesheet" type="text/css" href="assets/mediaqueries.css" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Londrina+Solid&display=swap"
+      rel="stylesheet"
+    />
+    <title>Metropolia</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="PWA- and DS-project done in Metropolia University of Applied Sciences,
-    course: web technology and media platforms">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="assets/style.css" />
-  <!--<link rel="stylesheet" type="text/css" href="assets/mediaqueries.css" />-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Londrina+Solid&display=swap" rel="stylesheet">
-  <title>Metropolia</title>
-  
-  <script src="https://kit.fontawesome.com/86f6734f3f.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/86f6734f3f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-  <main>
-
+  <body>
+    <main>
       <!-- All viewing screens are shared into own sections -->
 
       <!-- FIRST VIEW -->
 
-    <section id="lunch">
-      <article id="foodco">
-        <div id="foodcotitle">
-          <img src="./assets/img/Food&co_logo.jpg" alt="">
-          <p>Karakaarenkuja</p>
-        </div>
-      </article>
-      <article id="lunchlist">
-        <h1 id="title"></h1>
-        <br><br>
-        <div class="lists">
-          <!-- JavaScript here for meal-containers -->
-        </div>
-      </article>
+      <section id="lunch">
+        <article id="foodco">
+          <div id="foodcotitle">
+            <img src="./assets/img/Food&co_logo.jpg" alt="" />
+            <p>Karakaarenkuja</p>
+          </div>
+        </article>
+        <article id="lunchlist">
+          <div>
+            <h1 id="title"></h1>
+            <div class="lists">
+              <!-- JavaScript here for meal-containers -->
+            </div> 
+          </div>
+          <p id="allergens">
+            (G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M)
+            Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (VEG)
+            Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia,
+            (A) Sis. allergeeneja
+          </p>
+        </article>
+        <img
+          class="metropolia_logo"
+          src="./assets/img/metropolia_s_orange.png"
+          alt="metropolia logo"
+        />
+      </section>
+      <!-- SECOND VIEW -->
 
-    </section>
-    <!-- SECOND VIEW -->
-<!--
-    <section id="bustimes">
-      <article id="timetable">
-        <h2>HSL Bussiaikataulu</h2>
-        <i class="fas fa-bus"></i>
-        <br><br>
-        <div class="times">
-          <ul id="busnumber">
-          </ul>
-          <ul id="destination">
-          </ul>
-          <ul id="arrival">
-          </ul>
-        </div>
-      </article>
-    </section>
--->
-    <!-- THIRD VIEW
+      <section id="bustimes">
+        <article id="timetable">
+          <h2>HSL Bussiaikataulu</h2>
+          <i class="fas fa-bus"></i>
+          <br /><br />
+          <div class="times">
+            <ul id="busnumber"></ul>
+            <ul id="destination"></ul>
+            <ul id="arrival"></ul>
+          </div>
+          <img
+            class="metropolia_logo"
+            src="./assets/img/metropolia_s_orange.png"
+            alt="metropolia logo"
+          />
+        </article>
+        <article id="map"></article>
+      </section>
+
+      <!-- THIRD VIEW
 
     <section id="weather1">
       <article id="weathertable">
@@ -70,9 +91,32 @@
       </article>
     </section>
 -->
-     <!-- FOURTH VIEW -->
-  </main>
-
-</body>
-
+      <!-- FOURTH VIEW -->
+      <section id="feedback">
+        <article id="qrcode">
+          <img id="qrcodeimg" src="./assets/img/frame.png" />
+        </article>
+        <article id="teksti">
+          <div id="tekstit">
+            <div id="suomi">
+              <h1>Anna palautetta!</h1>
+              <p>
+                Skannaa viereinen QR-koodi ja auta meitä kehittämään
+                infotauluja!
+              </p>
+            </div>
+            <div id="englanti">
+              <h1>Give feedback!</h1>
+              <p>Scan the QR-code and help us improve this infoscreen!</p>
+            </div>
+          </div>
+        </article>
+        <img
+          class="metropolia_logo"
+          src="./assets/img/metropolia_s_orange.png"
+          alt="metropolia logo"
+        />
+      </section>
+    </main>
+  </body>
 </html>

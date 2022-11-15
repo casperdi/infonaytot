@@ -40,21 +40,23 @@ const parseMenu = async (menu, language, restaurantId) => {
   setMenus.forEach((set) => {
       menu.push(set.Meals);
   });
-  console.log("menu", menu);
+  console.log("menu1", menu);
   return menu;
 };
 
 const parseMenuMeals = async (menu) => {
 
   /** push meal name and diet codes into arrays */
-  const setMenus = karamalmiFi;
-  console.log("setmenys", setMenus);
-  setMenus.forEach((set) => {
-    Object.values(set.Meals).forEach((meal) => {
-      menu.push([meal.Name, "(" + meal.Diets.join(", ") + ")"]);
+  console.log("setmenys", menu);
+  menu.forEach((set) => {
+    console.log('hello');
+    set.forEach((meals) => {
+      meals.forEach((meal) => {
+        menu.push([meal.Name, "(" + meal.Diets.join(", ") + ")"]);
+      });
     });
   });
-  console.log("menu", menu);
+  console.log("menu2", menu);
   return menu;
 };
 
