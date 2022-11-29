@@ -36,11 +36,12 @@ const parseMenu = async (menu, language, restaurantId) => {
   const setMenus = parsedResponse.LunchMenus[todayIndex()].SetMenus;
   console.log('setmenys', setMenus);
   setMenus.forEach((set) => {
+    let submenu = [];
     Object.values(set.Meals).forEach((meal) => {
-      menu.push([meal.Name, '(' + meal.Diets.join(', ') + ')']);
+      submenu.push([meal.Name, '(' + meal.Diets.join(', ') + ')']);
     });
+    menu.push(submenu);
   });
-  console.log('menu',menu);
   return menu;
 };
 

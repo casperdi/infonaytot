@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <!--<link rel="stylesheet" type="text/css" href="assets/mediaqueries.css" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Londrina+Solid&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""
+    />
+    <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""
+    ></script>
+    <script
+    src="https://kit.fontawesome.com/86f6734f3f.js"
+    crossorigin="anonymous"
+    ></script>
+    <title>Metropolia</title>
+</head>
+
+<body>
+    <section id="bustimes">
+        <!--<article id="timetable">
+          <h2>HSL Bussiaikataulu</h2>
+          <i class="fas fa-bus"></i>
+          <br /><br />
+          <div class="times">
+            <ul id="busnumber"></ul>
+            <ul id="destination"></ul>
+            <ul id="arrival"></ul>
+          </div>
+          <img
+            class="metropolia_logo"
+            src="./assets/img/metropolia_s_orange.png"
+            alt="metropolia logo"
+          />
+        </article>-->
+        <article id="timetable">
+            <h1 id="time"></h1>
+            <table class="hsl-data">
+                <!--<tr class="bus-container headers">
+                    <td>Linja</td>
+                    <td>Suunta</td>
+                    <td>Aika</td>
+                    <td>Pysäkki</td>
+                </tr>-->
+            </table>
+        </article>
+        <article id="busmap">
+            <div id="map"></div>
+        </article>
+        <img
+          class="metropolia_logo"
+          src="./assets/img/metropolia_s_orange.png"
+          alt="metropolia logo"
+        />
+      </section>
+
+      <!-- THIRD VIEW
+
+    <section id="weather1">
+      <article id="weathertable">
+        <div id="weather">
+          <p id="city"></p>
+          <p id="temp"></p>
+          <span id="icon"><img src="assets/icons/unknown.png" alt=""></span>
+          <p id="desc"></p>
+      </article>
+    </section>
+-->
+
+<script>
+    let map = L.map("map").setView([60.22482, 24.75935], 17);
+
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    let tooltip = L.tooltip([60.225527, 24.760591], {
+      content: "Karanristi, E1808",
+      direction: "right",
+    }).addTo(map);
+
+    let tooltip2 = L.tooltip([60.225738, 24.757662], {
+      content: "Karanristi, E1807",
+      direction: "left",
+    }).addTo(map);
+
+    let tooltip3 = L.tooltip([60.22335, 24.760333], {
+      content: "Karamalmin koulu, E1814",
+      direction: "bottom",
+    }).addTo(map);
+
+    let tooltip4 = L.tooltip([60.223556, 24.760405], {
+      content: "Karamalmin koulu, E1815",
+      direction: "right",
+    }).addTo(map);
+
+    let tooltip5 = L.tooltip([60.226563, 24.757813], {
+      content: "Karamäki, E1854",
+      direction: "right",
+    }).addTo(map);
+
+    let tooltip6 = L.tooltip([60.226937, 24.757062], {
+      content: "Karamäki, E1853",
+      direction: "top",
+    }).addTo(map);
+
+    var circle = L.circle([60.224062, 24.758688, -0.11], {
+      color: "red",
+      fillColor: "#f03",
+      fillOpacity: 0.5,
+      radius: 20,
+    }).addTo(map);
+  </script>
+</body>
+</html>

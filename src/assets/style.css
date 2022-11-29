@@ -24,7 +24,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./img/anna-pelzer-IGfIGP5ONV0-unsplash.jpg");
+  background-image: url("./img/anna-pelzer-IGfIGP5ONV0-unsplash.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -51,6 +51,7 @@ section {
 
 #lunchlist {
   width: 50%;
+  background-color: white;
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   display: flex;
@@ -67,7 +68,6 @@ section {
 }
 
 .meal-name {
-  font-weight: 600;
   margin-right: 10px;
 }
 .meal-name p {
@@ -75,6 +75,23 @@ section {
 }
 .meal-container {
   display: flex;
+  flex-direction: column;
+  border-bottom: 3px dashed #fa7d09;
+  padding: 40px 40px;
+}
+
+.float-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.float-container:first-child {
+  font-weight: 600;
+}
+
+.meal-container:last-child {
+  border: none;
 }
 
 #title {
@@ -82,6 +99,7 @@ section {
   font-family: "Londrina Solid", cursive;
   font-size: 3rem;
   align-self: center;
+  margin-left: 30px;
 }
 
 .metropolia_logo {
@@ -89,12 +107,14 @@ section {
   position: absolute;
   bottom: 20px;
   right: 20px;
+  z-index: 1000;
 }
 
 .lists {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 5px;
 }
 
 .lists ul {
@@ -121,41 +141,59 @@ section {
 
 #bustimes {
   position: relative;
+  display: flex;
+  font-family: "Inter", sans-serif; 
+}
+
+#busmap {
+  width: 40%;
+  height: 100vh;
 }
 
 #timetable {
   width: 60%;
-  background-color: white;
+  background-color: #007AC9;
+  color: white;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-#timetable i {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.times {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+} 
+
+.hsl-data {
+  font-size: 2rem;
+  height: 80%;
+  width: 100%;
 }
 
-.times ul {
-  padding: 0;
-  margin: 0;
+.hsl-data tr:nth-child(even){
+  background-color: #005b98;
+  
 }
 
-#destination {
-  color: rgb(232, 93, 11);
+.headers{
+  font-weight: bold;
 }
 
-.times ul li {
-  list-style-type: none;
-  text-align: left;
-  margin-bottom: 15px;
+#time {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+/* ---------------------------- third view, feedback -------------------------------- */
 
 #feedback {
   display: flex;
@@ -169,25 +207,35 @@ section {
   justify-content: center;
   align-items: center;
   width: 50%;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #suomi {
   margin-bottom: 100px;
+  width: 95%;
 }
 
 #suomi h1 {
   color: white;
   font-family: "Londrina Solid", cursive;
+  letter-spacing: 4px;
+  font-size: 6.5rem;
 }
 
 #suomi p {
   color: white;
 }
 
+#englanti {
+  width: 95%;
+}
+
 #englanti h1 {
   color: black;
   font-family: "Londrina Solid", cursive;
+  font-size: 6.5rem;
+  letter-spacing: 4px;
+
 }
 
 #englanti p {
